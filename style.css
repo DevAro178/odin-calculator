@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --dark:#111827;
+    --dark-content-bg:#1f2937;
+    --secondary-content-bg:#27313e;
+    --highlight:#a9792b;
+    --primary-text:#dcdcdc;
+    --secondary-text:#acb1b8;
+    --pink:#f472b6;
+    --green:#0f766e;
+}
+
+*{
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+    font-family: "Poppins", system-ui;
+}
+
+body{
+    padding: 25px;
+    background-color: var(--dark);
+    color: var(--primary-text);
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+
+    .container{
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--dark-content-bg);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        .display{
+            width: 100%;
+            height: 135px;
+            background-color: var(--secondary-text);
+            font-size: 72px;
+            font-weight: 700;
+            color: var(--dark);
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+        }
+
+        .keys{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            user-select: none;
+            /* gap: 1px; */
+
+            div{
+                width: calc((100%)/4);
+                flex: auto;
+                height: 75px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid var(--dark-content-bg);
+                border-radius: 5px;
+                font-size: 22px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+
+            .operator{
+                background-color: var(--highlight);
+            }
+
+            .numbers{
+                background-color: var(--green);
+            }
+
+            .f-2{
+                flex:2;
+            }
+
+            .f-1{
+                flex: 1;
+            }
+        }
+    }
+}
